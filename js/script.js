@@ -10,8 +10,10 @@ function inputName(){
 }
 
 function inputNumber(){
-    const cardNumberInput = document.getElementById("cardholder-phone").value;
-    document.getElementById("numberholder").innerHTML = cardNumberInput;
+    const cardNumberInput = document.getElementById("card-number").value;
+    let numbers=cardNumberInput.match(/.{1,4}/g);
+    console.log(numbers.join(' '));
+    document.getElementById("numberholder").innerHTML = numbers.join(' ');
 }
 
 function inputMM(){

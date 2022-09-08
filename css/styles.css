@@ -128,6 +128,10 @@ input::placeholder{
     opacity: 0.4;
 }
 
+input:invalid{
+    border: 1px solid hsl(0, 100%, 66%);
+}
+
 label{
     display: block;
     letter-spacing: 0.1rem;
