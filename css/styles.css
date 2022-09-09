@@ -114,12 +114,10 @@ input[type=text]{
 }
 
 input[type=text]:focus{
-    border:1px solid transparent;
     outline: none;
-    -moz-border-image: -moz-linear-gradient(left, hsl(249, 99%, 64%) 0%, hsl(278, 94%, 30%) 100%);
-	-webkit-border-image: -webkit-linear-gradient(left, hsl(249, 99%, 64%) 0%, hsl(278, 94%, 30%) 100%);
-	border-image: linear-gradient(to right, hsl(249, 99%, 64%) 0%, hsl(278, 94%, 30%) 100%);
-    border-image-slice: 1;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1 10%;
 }
 
 input::placeholder{
@@ -130,6 +128,11 @@ input::placeholder{
 
 input:invalid{
     border: 1px solid hsl(0, 100%, 66%);
+}
+
+form:invalid button {
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 label{
@@ -153,22 +156,20 @@ label{
     grid-column: span 2;
 }
 
+
 #number-error{
-    /* display: none; */
     color: hsl(0, 100%, 66%);
     font-size: 0.7rem;
     margin-top: 0.5rem;
 }
 
 #expiry-error{
-    /* display: none; */
     grid-column: span 2;
     color: hsl(0, 100%, 66%);
     font-size: 0.7rem;
 }
 
 #cvc-error{
-    /* display: none; */
     color: hsl(0, 100%, 66%);
     font-size: 0.7rem;
 }

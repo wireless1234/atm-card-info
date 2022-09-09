@@ -11,7 +11,7 @@ function inputName(){
 
 function inputNumber(){
     const cardNumberInput = document.getElementById("card-number").value;
-    let numbers=cardNumberInput.match(/.{1,4}/g);
+    let numbers=cardNumberInput.match(/.{0,4}/g);
     console.log(numbers.join(' '));
     document.getElementById("numberholder").innerHTML = numbers.join(' ');
 }
