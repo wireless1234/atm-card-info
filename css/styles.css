@@ -172,6 +172,7 @@ label{
 #cvc-error{
     color: hsl(0, 100%, 66%);
     font-size: 0.7rem;
+    grid-column-start: 3;
 }
 
 .submitbutton{
@@ -221,6 +222,12 @@ label{
     background-color: hsl(278, 68%, 11%);
     color: hsl(0, 0%, 100%);
     cursor: pointer;
+}
+
+#cvc::after{
+    content:"hello";
+    color: red;
+    display: block;
 }
 
 
